@@ -4,4 +4,4 @@ dura = int(input("Event duration (minutes): ")) #Водимо кількість
 all_mins = hour*60 + mins + dura #Рахуємо скільки всього хвилин разом у трьох нащих змінних
 max_hours = (all_mins//60)%24 #Створюємо формулу для максимального заповнення годин часу
 max_mins = all_mins%60 #Створюємо формулу для максимального заповнення хвилин часу
-print("Очікуваний результат: ",max_hours,":",max_mins) #Виводимо результат
+print("Expected result: ",max_hours,":",max_mins) #Виводимо результат
