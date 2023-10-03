@@ -1,19 +1,21 @@
-income = float(input("Enter the annual income: ")) #Вовдимо заробітну плату за рік
-
-if income <= 85528 :   #Вираховуємо податок для зарплати менше або = 85528 талерів
-    tax = income/100*18-556.02
-    tax = round(tax,0)
-    if tax < 0: #Умова за якої податкова ніколи не повертає гроші
-        tax = 0.0
-    print("The tax is:", tax, "thalers") #Виводимо податок
-elif income > 85528  :  #Вираховуємо податок для зарплати більше 85528 талерів
-    tax = (income-85528)/100*32+14839.02
-    tax = round(tax,0)
-    if tax < 0: #Умова за якої податкова ніколи не повертає гроші
-        tax = 0.0
-    print("The tax is:", tax, "thalers")#Виводимо податок
-
-
-
-
-
+numb_year = int(input("Введіть рік (наприклад,2004): "))#Вводимо рік
+if numb_year%4!=0: #Умова при якій не ділиться на 4 — звичайний рік
+    if numb_year < 1582: #Додаткова умова при якій рік не належить Григоріанському календарю
+        print("Not within the Gregorian calendar period.")
+    else:
+        print("Common year")
+elif numb_year%100!=0 : #Умова при якій не ділиться на 100 — високосний рік
+    if numb_year < 1582: #Додаткова умова при якій рік не належить Григоріанському календарю
+        print("Not within the Gregorian calendar period.")
+    else:
+        print("Leep year")
+elif numb_year % 400!=0 : #Умова при якій не ділиться на 400 — звичайний рік
+    if numb_year < 1582: #Додаткова умова при якій рік не належить Григоріанському календарю
+        print("Not within the Gregorian calendar period.")
+    else:
+        print("Common year")
+else: #Якщо жодна з умов не виконується — високосний рік
+    if numb_year < 1582: #Додаткова умова при якій рік не належить Григоріанському календарю
+        print("Not within the Gregorian calendar period.")
+    else:
+        print("Leep year")
