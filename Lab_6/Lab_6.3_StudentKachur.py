@@ -5,7 +5,7 @@ def is_prime(num): #Функція перевірки чи є задане чи�
     return True
 
 #тестуючий код
-for i in range(1, 20):
+for i in range(2, 20):
     if is_prime(i + 1):
         print(i + 1, end=" ")
 print()
