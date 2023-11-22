@@ -12,3 +12,4 @@ for char in cipher:
     text += chr(code)
 
 print(text)
+
